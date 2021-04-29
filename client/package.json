@@ -19,9 +19,8 @@
     "test:unit:watchAll": "jest --watchAll",
     "serve:test:coverage": "quasar serve test/jest/coverage/lcov-report/ --port 8788",
     "concurrently:dev:jest": "concurrently \"quasar dev\" \"jest --watch\"",
-    "build": "quasar build",
-    "dev": "quasar dev",
-    "start": "yarn quasar dev"
+    "dev": "yarn dev",
+    "start": "yarn dev"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
