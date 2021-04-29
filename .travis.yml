@@ -25,6 +25,17 @@ jobs:
       script:
       - docker-compose run client yarn quasar test --unit jest
       - docker-compose run api ./test_api.sh
+    
+    -stage: deploy
+      deploy:
+        provider: heroku
+        api_key:
+        secure: $HEROKU_AUTH_TOKEN
+        app: client
+        on: 
+          all_branches: true
+        run:
+        - "yarn && yarn start"
 
 after_success:
   - codecov
