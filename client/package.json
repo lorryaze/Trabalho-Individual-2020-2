@@ -19,6 +19,7 @@
     "test:unit:watchAll": "jest --watchAll",
     "serve:test:coverage": "quasar serve test/jest/coverage/lcov-report/ --port 8788",
     "concurrently:dev:jest": "concurrently \"quasar dev\" \"jest --watch\"",
+    "prestart": "yarn install",
     "build": "quasar build",
     "start": "node server.js"
   },
