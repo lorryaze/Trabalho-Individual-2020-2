@@ -69,7 +69,7 @@
 </template>
 
 <script>
-import {api} from '../pages/config/api.js';
+import {api} from '../config/api.js';
 export default {
   name: "PageIndex",
   data() {
