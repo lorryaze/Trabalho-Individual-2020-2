@@ -24,31 +24,7 @@ jobs:
       script:
       - docker-compose run client yarn quasar test --unit jest
       - docker-compose run api ./test_api.sh
-      after_success:
-      - codecov
-    
-    - stage: deploy-api
-      deploy:
-        provider: heroku
-        api_key: 
-          secure: HEROKU_AUTH_TOKEN
-        app: api-trabalho-indivudual
-        on:
-          repo: lorryaze/Trabalho-Individual-2020-2
-          branch: master
 
-    - stage: deploy-client
-      deploy:
-        provider: heroku
-        api_key: 
-          secure: HEROKU_AUTH_TOKEN
-        app: client-dasdasd
-        on:
-          repo: lorryaze/Trabalho-Individual-2020-2
-          branch: master
-
-    - stage: test production
-      script:
-        - 'curl https://client-dasdasd.herokuapp.com/'
-        - 'curl https://api-trabalho-indivudual.herokuapp.com/'
+after_success:
+  - codecov
         
