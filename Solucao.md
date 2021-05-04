@@ -33,11 +33,11 @@ docker-compose run api ./test_api.sh
 
 ## Integração Continua
 
-A integração contínua foi feita com o TravisCI e tem estágios de build e teste. Todas as configurações são feitas no arquivo .travis.yml no root do projeto, e ambos os estágios são rodados sempre que um novo commit é feito. 
+A integração contínua foi feita com o TravisCI e tem estágios de build, teste e deploy. Todas as configurações são feitas no arquivo .travis.yml no root do projeto, e ambos os estágios são rodados sempre que um novo commit é feito. 
 
 ![alt text](./images/ci.jpg)
 
-![alt text](./images/stages.jpg)
+![alt text](./images/stages1.jpg)
 
 A branch master do repositório está protegida e os prs vão ser aceitos apenas se todos os requisitos forem cumpridos.
 
@@ -53,7 +53,7 @@ Já a coleta de métricas pra qualidade de código foram feitas usando o sonarcl
 
 ## Deploy
 
-O deploy da aplicação foi feito através do Heroku, como o repositório tem duas aplicações diferentes setamos um Procfile para cada aplicação para e fizemos o deploy de cada uma de maneira indpendente.
+O deploy da aplicação foi feito através do Heroku, como o repositório tem duas aplicações diferentes setamos um Procfile para cada aplicação e fizemos o deploy de cada um de maneira indpendente.
 
 A aplicação do cliente (frontend) se encontra no seguinte endereço:
 
