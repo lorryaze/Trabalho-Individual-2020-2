@@ -5,7 +5,6 @@ services:
 
 env:
   - DOCKER_COMPOSE_VERSION: 1.26.2
-  - CODECOV_TOKEN='cfb96bda-6e0b-4788-9bf6-ee85a8feb4aa'
 
 before_install:
 - sudo rm /usr/local/bin/docker-compose
@@ -25,6 +24,26 @@ jobs:
       script:
       - docker-compose run client yarn quasar test --unit jest
       - docker-compose run api ./test_api.sh
+    
+    - stage: deploy-api
+      deploy:
+        provider: heroku
+        api_key: 
+          secure: HEROKU_AUTH_TOKEN
+        app: api-trabalho-indivudual
+        on:
+          repo: lorryaze/Trabalho-Individual-2020-2
+          branch: master
+
+    - stage: deploy-client
+      deploy:
+        provider: heroku
+        api_key: 
+          secure: HEROKU_AUTH_TOKEN
+        app: client-dasdasd
+        on:
+          repo: lorryaze/Trabalho-Individual-2020-2
+          branch: master
 
 after_success:
   - codecov

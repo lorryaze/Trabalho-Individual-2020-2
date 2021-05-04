@@ -4,8 +4,9 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=lorryaze_Trabalho-Individual-2020-2&metric=alert_status)](https://sonarcloud.io/dashboard?id=lorryaze_Trabalho-Individual-2020-2)
 [![Build Status](https://travis-ci.com/lorryaze/Trabalho-Individual-2020-2.svg?branch=master)](https://travis-ci.com/lorryaze/Trabalho-Individual-2020-2)
 
-Aluna: Lorrany dos Santos Azevedo
-Matricula: 16/0132550
+**Aluna**: Lorrany dos Santos Azevedo
+
+**Matricula**: 16/0132550
 
 ## Containerização
 
@@ -61,3 +62,11 @@ A aplicação do cliente (frontend) se encontra no seguinte endereço:
 Já a api se encontra no seguinte endereço:
 
 [Backend- Api aplication](https://api-trabalho-indivudual.herokuapp.com/task/)
+
+## Referências
+
+[How to deploy a monorepo to multiple heroku apps using github actions](https://medium.com/softup-technologies/how-to-deploy-a-monorepo-to-multiple-heroku-apps-using-github-actions-65e87dc27878)
+
+[Deploying a Quasar app with heroku](https://quasar.dev/quasar-cli/developing-spa/deploying#deploying-with-heroku)
+
+[Travis Documentation](https://docs.travis-ci.com/)
