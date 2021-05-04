@@ -1,30 +1,31 @@
 language: generic
-
 services:
 - docker
-
 env:
-  - DOCKER_COMPOSE_VERSION: 1.26.2
-
+- DOCKER_COMPOSE_VERSION: 1.26.2
 before_install:
 - sudo rm /usr/local/bin/docker-compose
-- curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+- curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname
+  -s`-`uname -m` > docker-compose
 - chmod +x docker-compose
 - sudo mv docker-compose /usr/local/bin
-
 install: pip install codecov
-
 jobs:
   include:
-    - stage: build
-      script:
-      - docker-compose up -d --build
-    
-    - stage: test
-      script:
-      - docker-compose run client yarn quasar test --unit jest
-      - docker-compose run api ./test_api.sh
-
+  - stage: build
+    script:
+    - docker-compose up -d --build
+  - stage: test
+    script:
+    - docker-compose run client yarn quasar test --unit jest
+    - docker-compose run api ./test_api.sh
 after_success:
-  - codecov
-        
+- codecov
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: OcrnBk6UCZGSkIc/cFpzO/35Pj6klyWlS6ipGh+lBPp2A3kXqJktD2IsyNw1QDpr2Fv98RzKrf4ailmmlDMQewCRyoLYzZlcA6VceyadStX+z+fWp2gzONRlokmO3WsFfnff7mWcmyIt0XnWhk9Ro1EnDGfH6po58R7zECLZ/LUEuifIsSjkk7DHipPV2O0jOPAGkEDr7DgVj+lzC9yVdmCkDephk7DHfjei0wLpHuqI1PVumyKtbKnkS7RHdt7e2F9DRjGtEc0O+sUTyCEG37pjRyShw0ps0RnUFux7JI70cKhafCITGbBDbC9kQeOg81ue85mMv68qZjYvH0r7DDBa1WWTnAnwfrT0dCNZJeiHwVijcZ1kQ6gb/boGFLu0Pzb0LaphFRumxj9cGE+297Ha1hxOsuyYbng/1DPyXJ7jYP6nR7dBmflJG0Gei0K83XlUUNXe+xV7zfUNZngDZ5umP2c7+IE5R20COqJa6jjJzvcq3VcWdNRsMYMbc6a5Nxsgo84qeDn/UTMGltIh8PlrhvGKYABiSE3vmA9eXt38FrW1yvveCPAlunGh27+J+dGF6f+NTFwM/lJhDAZxFhBIfzWtzgWz+Z8ja/WifvLZPk5WIGHzZCu1Y+umRVTL8ExfHqw8UGKxfLmUZoLoQEqZCCt26LptMVHKmiFR2Wk=
+  app: client-dasdasd
+  on: 
+    repo: lorryaze/Trabalho-Individual-2020-2
