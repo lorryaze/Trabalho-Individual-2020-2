@@ -1,3 +1,6 @@
+[![codecov](https://codecov.io/gh/lorryaze/Trabalho-Individual-2020-2/branch/dev/graph/badge.svg?token=0UPT0SVC1A)](https://codecov.io/gh/lorryaze/Trabalho-Individual-2020-2)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=lorryaze_Trabalho-Individual-2020-2&metric=alert_status)](https://sonarcloud.io/dashboard?id=lorryaze_Trabalho-Individual-2020-2)
+[![Build Status](https://travis-ci.com/lorryaze/Trabalho-Individual-2020-2.svg?branch=master)](https://travis-ci.com/lorryaze/Trabalho-Individual-2020-2)
 # Trabalho Individual 2020.2
 
 
