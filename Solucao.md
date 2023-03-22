@@ -10,7 +10,7 @@
 
 ## Containerização
 
-Cada aplicação do projeto roda em um container diferente, logo temos um container pro backend, pro frontend e um para o banco de dados. Para facilita a execução do projeto utilizamos o Docker-Compose para que os 3 containers fossem buildados e rodados de uma só vez. Para rodar o projeto basta rodar o seguinte comando na pasta root.
+Cada aplicação do projeto roda em um container diferente, logo temos um container pro backend, pro frontend e um para o banco de dados. Para facilitar a execução do projeto utilizamos o Docker-Compose para que os 3 containers fossem buildados e rodados de uma só vez. Para rodar o projeto basta rodar o seguinte comando na pasta root.
 
 ```console
 docker-compose up
